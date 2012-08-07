@@ -7,6 +7,11 @@
 	<link rel="stylesheet" href="jquery/jNotify.jquery.css" type="text/css" />
 </head>
 <body>
+<ul>
+	<li>Full documentation on <a href="http://www.myjqueryplugins.com/jNotify">MyjQueryPlugins.com/jNotify</a></li>
+	<li>Live demonstration on <a href="http://www.myjqueryplugins.com/jNotify/demo">jNotify demonstration page</a></li>
+</ul>
+<h1>jNotify plugin</h1>
 <p>
 <a href="#" class="success">It's a success !</a><br />
 <a href="#" class="notice">It's a notice !</a><br />
@@ -19,7 +24,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		/** success **/
-		$("a").click(function(e){
+		$("p a").click(function(e){
 			e.preventDefault();
 			switch ($(this).attr('class'))
 			{
