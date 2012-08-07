@@ -2,11 +2,11 @@
 *************************************************************************
 @Name :       	jNotify - jQuery Plugin
 @Revison :    	2.1
-@Date : 		18/01/2011
-@Author:     	 ALPIXEL (www.myjqueryplugins.com - www.alpixel.fr)
-@Support:    	 FF, IE7, IE8, MAC Firefox, MAC Safari
-@License :		 Open Source - MIT License : http://www.opensource.org/licenses/mit-license.php
- 
+@Date : 		01/2011
+@Author:     	ALPIXEL - (www.myjqueryplugins.com - www.alpixel.fr)
+@Support:    	FF, IE7, IE8, MAC Firefox, MAC Safari
+@License :		Open Source - MIT License : http://www.opensource.org/licenses/mit-license.php
+
 **************************************************************************
 *************************************************************************/
 (function($){
@@ -21,8 +21,8 @@
 			ShowTimeEffect : 200, 			// duration of the Show Effect
 			HideTimeEffect : 200, 			// duration of the Hide effect
 			LongTrip : 15,					// in pixel, length of the move effect when show and hide
-			HorizontalPosition : 'center', 	// left, center, right
-			VerticalPosition : 'top',	 // top, center, bottom
+			HorizontalPosition : 'right', 	// left, center, right
+			VerticalPosition : 'bottom',	 // top, center, bottom
 			ShowOverlay : true,				// show overlay behind the notice ?
 			ColorOverlay : '#000',			// color of the overlay
 			OpacityOverlay : 0.3,			// opacity of the overlay
@@ -173,7 +173,7 @@
 			if(opts.clickOverlay)
 			overlay.click(function(e){
 				e.preventDefault();
-				opts.TimeShown = 0; // Thanks to Guillaume M.
+				opts.TimeShown = 0;
 				$.jNotify._close();
 			});
 		},
@@ -184,7 +184,7 @@
 					case 'top':
 						if(!opts.autoHide)
 							opts.TimeShown = 0;
-						$Div.stop(true, true).delay(opts.TimeShown).animate({ // Tanks to Guillaume M.
+						$Div.stop(true, true).delay(opts.TimeShown).animate({
 							top: posTop-opts.LongTrip,
 							opacity:0
 						},opts.HideTimeEffect,function(){
@@ -197,7 +197,7 @@
 					case 'center':
 						if(!opts.autoHide)
 							opts.TimeShown = 0;
-						$Div.stop(true, true).delay(opts.TimeShown).animate({ // Tanks to Guillaume M.
+						$Div.stop(true, true).delay(opts.TimeShown).animate({
 							opacity:0
 						},opts.HideTimeEffect,function(){
 							$(this).remove();
@@ -209,7 +209,7 @@
 					case 'bottom' :
 						if(!opts.autoHide)
 							opts.TimeShown = 0;
-						$Div.stop(true, true).delay(opts.TimeShown).animate({ // Tanks to Guillaume M.
+						$Div.stop(true, true).delay(opts.TimeShown).animate({
 							top: posTop+opts.LongTrip,
 							opacity:0
 						},opts.HideTimeEffect,function(){
